@@ -1,0 +1,20 @@
+
+/* Police Raleway */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+{
+    font-family: 'Raleway';
+    src: 	url('static/Raleway-Black.ttf'),
+        	url('static/Raleway-BlackItalic.ttf') 
+        	url('Raleway-VariableFont_wght.ttf') 
+        	url('Raleway-Italic-VariableFont_wght.ttf')
+}
+
+
+*{
+	font-family: Raleway, Arial, Verdana,sans-serif;
+}
+
+.containerglobal
+
