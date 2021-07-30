@@ -1,20 +1,62 @@
 
-/* Police Raleway */
+                                /* Police Raleway */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
-
+@font-face 
 {
-    font-family: 'Raleway';
-    src: 	url('static/Raleway-Black.ttf'),
-        	url('static/Raleway-BlackItalic.ttf') 
-        	url('Raleway-VariableFont_wght.ttf') 
-        	url('Raleway-Italic-VariableFont_wght.ttf')
+  font-family: "Raleway-regular";
+  src: url("static/Raleway-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Raleway-thin";
+  src: url("static/Raleway-Thin.ttf");
+}
 
-*{
-	font-family: Raleway, Arial, Verdana,sans-serif;
+@font-face {
+  font-family: "Raleway-Black";
+  src: url("Raleway-Black.ttf");
+}
+
+body
+
+{    
+margin: 0; /* definit la taille des marges sur les quatre côtés de l'élément */
+overflow-x: hidden;  /* permet de définir les mécanismes à utiliser lorsque le contenu dépasse des bords droit et gauche de la boîte */
+font-family: Raleway, Arial, Verdana,sans-serif;
+display: block; 
+padding: 30px; 
 }
 
 .containerglobal
+{   
+    max-width: 1440px;
+    margin: 0 auto;  /* centre le conteneur*/
+}
+
+                                /*header*/
+
+
+.nav3
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul 
+{
+  display: flex;
+  list-style: none; /*aucun marqueur d'item de liste*/
+  margin-left: 28px;
+}
+
+
+ 
 
