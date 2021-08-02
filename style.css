@@ -1,5 +1,5 @@
 
-                                /* Police Raleway */
+/* Police Raleway */
 
 @font-face 
 {
@@ -13,30 +13,35 @@
 }
 
 @font-face {
-  font-family: "Raleway-Black";
-  src: url("Raleway-Black.ttf");
+  font-family: "Raleway-Bold";
+  src: url("Raleway-Bold.ttf");
 }
 
-body
-
-{    
-margin: 0; /* definit la taille des marges sur les quatre côtés de l'élément */
-overflow-x: hidden;  /* permet de définir les mécanismes à utiliser lorsque le contenu dépasse des bords droit et gauche de la boîte */
-font-family: Raleway, Arial, Verdana,sans-serif;
-display: block; 
-padding: 30px; 
+a:hover 
+{
+  color: #0065fc;
 }
 
-.containerglobal
-{   
-    max-width: 1440px;
-    margin: 0 auto;  /* centre le conteneur*/
+
+h2,
+h3,
+h4,
+a {
+  font-family: "Raleway-Bold";
+  font-weight: bold;
 }
 
-                                /*header*/
+p {
+  font-family: "Raleway";
+}
 
+#containerglobal
+{
+  margin: 0 auto;
+  width: 98%;
+}
 
-.nav3
+.conteneurheader
 {
   display: flex;
   flex-direction: row;
@@ -47,16 +52,192 @@ padding: 30px;
 .navigation
 {
   display: flex;
-  justify-content: space-between;
+  margin-right: 3%;
 }
 
-header ul 
+header ul {
+  display: flex;
+  list-style: none;
+  margin-right: 3em;
+  color: #0065fc;
+}
+
+.hebernav
 {
   display: flex;
-  list-style: none; /*aucun marqueur d'item de liste*/
-  margin-left: 28px;
+  margin-right: 3em;
+}
+
+nav a 
+{
+  text-decoration: none;
+  color: #0065fc;
+}
+
+.herberetactivnav
+{
+  text-decoration: none;
+  color: black;
+}
+
+.titrehaut
+{
+display: flex;
+flex-direction: row;
+}
+
+.rechercher
+{
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    margin: 30px 5px;
+    max-width: 400px;
+    min-width: 305px;
+}
+
+.rechercher input 
+{
+    border: none;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.fa-map-marker-alt
+{
+    background-color: whitesmoke;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    color: black;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.filtres
+{
+  display: flex;
+align-content: center;
 }
 
 
- 
+.filtres h3 {
+    margin: 10px
+}
+
+.filtres a {
+    color: black;
+    text-decoration: none;
+}
+
+.icone
+{
+  margin-left: 10px;
+  margin: 10px
+}
+
+.icone: hover span {
+    text-decoration: #0065FC;
+}
+
+.iconefiltres
+{
+    background-color: #DEEBFF;
+    
+    color: #0065FC;
+    font-size: 20px;
+    margin: -2px;
+    padding: 12px;
+}
+
+
+
+
+.hotel img 
+{
+  width: 100px;
+  height: 100px;
+}
+
+.popular img
+{
+  width: 100px;
+  height: 100px;
+}
+
+
+#Hebergements
+{
+  background-color : #F2F2F2;;
+  border-radius: 10px;
+  margin-right: 3em;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+flex-wrap: wrap;
+}
+
+#lespluspopulaires
+{
+  background-color : #F2F2F2;;
+  border-radius: 10px;
+}
+
+main
+{
+  display: flex;
+
+}
+
+
+.contenuActivites img
+{
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+border-radius:7px;
+width: 100px;
+height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer
+{
+  background-color : #F2F2F2;;
+border-radius: 0;
+}
+
+.footerglobal
+{
+  display: flex;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.contenufooter
+{
+  width: 40%;
+}
+
+.liFooter
+{
+  color: black;
+  display: block;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+
 
