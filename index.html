@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">    <!--  permets de déclarer la langue du texte par défaut dans la page -->
-
 <head>
     <meta charset="utf-8"> <!-- permet d'encoder toutes les langues, du français au japonais en passant par l'arabe -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- contrôler la mise en page sur mobile -->
@@ -17,16 +16,16 @@
 
     <header>
 
-            <div class="navHebActIns">
+            <div class="conteneurheader">
                 <div id="logo">
                     <img class="logoreservia" src="images/logo/Reservia.svg" alt="Logo Reservia"> <!-- logo et nom -->
                 </div>
 
                     <nav class="navigation"> <!-- nav. site coin superieur droit -->
-                    <ul>
-                        <li><a href="#Hebergements">Hébergements</a></li>
-                        <li><a href="#Activites">Activités</a></li>  
-                    </ul>   
+                        <ul class="herberetactivnav">
+                            <li class="hebernav"><a href="#Hebergements">Hébergements</a></li>
+                            <li class="activnav"><a href="#Activites">Activités</a></li>  
+                        </ul>   
                         
                         <div class="inscrire">
                         <p><a>S'inscrire</a></p>
@@ -44,12 +43,15 @@
 
             <div class="rechercher">
                 <div class="barrederecherche">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="iconemark"> </div>
+                     <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                 </div>
-                    <input class="ville" type="search" name="recherche" value="Marseille, France"/> <!-- saisir des termes de recherche -->
-                    <button class="boutonrecherche" type="submit">
+                    <p>
+                        <input class="ville" type="search" name="recherche" value="Marseille, France"/> <!-- saisir des termes de recherche -->
+                    </p>
+                    <button class="boutonrecherche" type="submit"> </button>
                         <span>Rechercher</span>
-                    </button> <!-- Le bouton soumet les données du formulaire au serveur--> 
+                     <!-- Le bouton soumet les données du formulaire au serveur--> 
             </div>
 
                                             <!-- filtres -->
@@ -60,28 +62,28 @@
             <div class="filtres">
                 <h3 class="H3filtres">Filtres</h3>
 
-                <div class="iconedollar">
+                <div class="icone">
                     <div class="iconefiltres">
                         <i class="fas fa-money-bill-wave-alt"></i>
                     </div>
                     <span class="filtrestitle">Économique</span>
                 </div>
 
-                <div class="iconeenfant">
+                <div class="icone">
                     <div class="iconefiltres">
                         <i class="fas fa-child"></i>
                     </div>
                     <span class="filtrestitle">Familial</span>
                 </div>
 
-                <div class="iconecoeur">
+                <div class="icone">
                     <div class="iconefiltres">
                         <i class="fas fa-heart"></i>
                     </div>
                     <span class="filtrestitle">Romantique</span>
                 </div>
 
-                <div class="iconechien">
+                <div class="icone">
                     <div class="iconefiltres">
                         <i class="fas fa-dog"></i>
                     </div>
@@ -91,8 +93,8 @@
             </div>
 
             <div class="info">
-                <small> <!-- textes en petits caractères -->
-                <span><i class="fas fa-info"></i></span>
+                <small class="textinfo"><!-- textes en petits caractères -->
+                <span class="fas fa-info" aria-hidden="true"></span>
                 Plus de 500 logements sont disponibles dans cette ville
                 </small>
             </div>
@@ -101,6 +103,7 @@
 
                                             <!-- Section : HEBERGEMENT-->
 
+<main class="hebergementetpopulaires">
     <div class="locations">
         <section id="Hebergements">
             <h2 class="section1">Hébergements à Marseille</h2>
@@ -249,13 +252,14 @@
                     </div>
                 </div>               
         </section>
-        
+</main> <!-- fin main Hebergements et Poulaires -->     
 
                                             <!-- Section : Activités -->
 
         <section id="Activites">
             <h2 class="section3" id="Activitesglobale">Activités à Marseille</h2>
                 <div class="contenuActivites">
+                       
                         
                         <div class="Activite1">
                             <a href="#"> <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" class="imageactiv1">
