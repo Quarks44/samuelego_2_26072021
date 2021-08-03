@@ -7,149 +7,62 @@
   src: url("static/Raleway-Regular.ttf");
 }
 
-@font-face {
-  font-family: "Raleway-thin";
-  src: url("static/Raleway-Thin.ttf");
-}
-
-@font-face {
-  font-family: "Raleway-Bold";
-  src: url("Raleway-Bold.ttf");
-}
-
-a:hover 
+*
 {
-  color: #0065fc;
+  font-family: Raleway-regular;
 }
 
-
-h2,
-h3,
-h4,
-a {
-  font-family: "Raleway-regular";
-  font-weight: bold;
-}
-
-p {
-  font-family: "Raleway-regular";
-}
 
 #containerglobal
 {
-  margin: 0 auto;
-  width: 98%;
+    max-width: 1440px;
+    margin: 2em 2em;
+    
 }
+
+
+
+                    /* HEADER */
 
 .conteneurheader
 {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navigation
 {
-  display: flex;
-  margin-right: 3%;
-}
-
-header ul {
-  display: flex;
-  list-style: none;
-  margin-right: 3em;
-  color: #0065fc;
-}
-
-.hebernav
-{
-  display: flex;
-  margin-right: 3em;
-}
-
-nav a 
-{
-  text-decoration: none;
-  color: #0065fc;
+ display: flex;
+ padding: 1em;
 }
 
 .herberetactivnav
 {
-  text-decoration: none;
-  color: black;
+  display: flex;
+  list-style: none;
+  padding-right: 2em;
+}
+
+.activnav
+{display: flex;
+padding-left: 2em;
 }
 
 .titrehaut
 {
-display: flex;
-flex-direction: row;
-}
-
-.rechercher
-{
-    border-radius: 20px;
-    border: 2px solid whitesmoke;
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    margin: 30px 5px;
-    max-width: 400px;
-    min-width: 305px;
-}
-
-.rechercher input 
-{
-    border: none;
-    padding-left: 10px;
-    width: 100%;
-}
-
-.fa-map-marker-alt
-{
-    background-color: whitesmoke;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
-    color: black;
-    font-size: 20px;
-    padding: 15px;
-}
-
-.filtres
-{
   display: flex;
-align-content: center;
 }
 
 
-.filtres h3 {
-    margin: 10px
-}
 
-.filtres a {
-    color: black;
-    text-decoration: none;
-}
 
-.icone
-{
-  margin-left: 10px;
-  margin: 10px
-}
 
-.icone: hover span {
-    text-decoration: #0065FC;
-}
 
-.iconefiltres
-{
-    background-color: #DEEBFF;
-    
-    color: #0065FC;
-    font-size: 20px;
-    margin: -2px;
-    padding: 12px;
-}
+
+
+
+
 
 
 
@@ -199,11 +112,24 @@ main
 .contenuActivites
 {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  ﬂex-wrap: wrap;
+  ﬂex-ﬂow: row wrap;
 }
+
+.Activite1
+{
+order:-3;
+  width: 300px;
+  height: 400px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -245,3 +171,4 @@ footer
 
 
 
+}fin quieries
