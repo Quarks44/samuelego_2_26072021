@@ -27,12 +27,12 @@ h2,
 h3,
 h4,
 a {
-  font-family: "Raleway-Bold";
+  font-family: "Raleway-regular";
   font-weight: bold;
 }
 
 p {
-  font-family: "Raleway";
+  font-family: "Raleway-regular";
 }
 
 #containerglobal
@@ -166,6 +166,11 @@ align-content: center;
   height: 100px;
 }
 
+.contenuActivites img
+{
+  width: 100px;
+  height: 100px;
+}
 
 #Hebergements
 {
@@ -191,16 +196,14 @@ main
 }
 
 
-.contenuActivites img
+.contenuActivites
 {
--moz-border-radius:7px;
--webkit-border-radius:7px;
-border-radius:7px;
-width: 100px;
-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  ﬂex-wrap: wrap;
 }
-
-
 
 
 
@@ -215,7 +218,7 @@ height: 100px;
 footer
 {
   background-color : #F2F2F2;;
-border-radius: 0;
+  border-radius: 0;
 }
 
 .footerglobal
@@ -223,7 +226,7 @@ border-radius: 0;
   display: flex;
   max-width: 100%;
   padding: 0 10px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* définit la façon dont la hauteur et la largeur totale d'un élément est calculée */
 }
 
 .contenufooter
@@ -237,6 +240,7 @@ border-radius: 0;
   display: block;
   margin: 15px 0;
   font-weight: 500;
+  text-decoration:none;  
 }
 
 
