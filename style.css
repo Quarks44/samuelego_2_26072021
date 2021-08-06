@@ -1,449 +1,329 @@
-/* Police Raleway */
+                                                /* SITE RESERVIA P02 */
+
+
+                                                /* Police Raleway */
+
+
 
 @import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&amp;display=swap);
 
-html
-{
-font-size: 100%;
-}
-
-* 
+*
 {
 font-family: "Raleway", "Sans serif";
-scroll-behavior: smooth;
 }
 
-a:link, a:visited 
+html
+{
+font-size: 100%; /* Il est généralement considéré comme la meilleure pratique  pour l'accessibilité de définir votre base à 100 % sur l' élément et d'utiliser des unités relatives pour gérer toutes les autres règles de votre CSS */
+}
+
+body
+{
+margin: 0;
+box-sizing: border-box; /* La propriété CSS box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculée */
+}
+
+.conteneurglobal
+{
+max-width: 1440px;
+margin: auto;
+padding: 0 2rem;
+}
+
+.milieudepage
+{
+grid-column: 2; /* définir la taille et l'emplacement d'un élément */
+}
+
+                                                /* Header */
+
+
+header
+{
+margin-bottom: 20px;
+}
+
+.conteneurlogo
+{
+display: flex;
+align-items: center;
+}
+
+.menunav
+{
+display: grid;
+grid-template-columns: 60% auto auto auto; /* La propriété grid-template-columns définit les noms des lignes et les fonctions de taille (track sizing) pour les colonnes de la grille */
+}
+
+.menunav >a
+{
+display: flex;
+justify-content: center;
+}
+
+header a
+{
+flex-wrap: wrap;
+padding: 2.4vw 1.8vw 2.4vw 1.8vw;
+border-top: 2px solid white;
+}
+
+a:link, a:visited /* modifier l'aspect d'un lien après que l'utilisateur l'a visité */
 {
 text-decoration: none;
 color: black;
 }
 
-h2 
+header a:hover, header a:active
 {
-display: block;
-font-size: 1.5em;
-margin-block-start: 0.83em;
-margin-block-end: 0.83em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-font-weight: bold;
+text-decoration: none; /* La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte */
+border-top: 2px solid #0065FC;
+color:  #0065FC;
 }
 
-h4
-{
-display: block;
-font-size: 1.17em;
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-font-weight: bold;
-}
-
-#containerglobal
-{
-max-width: 1440px;
-margin: 0 auto;
-background-color: #f7a8a8;  
-}
+                                                /* Barre de recherche */
 
 
-
-                    /* HEADER */
-
-.conteneurheader
+.barrederecherche
 {
 display: flex;
+margin: 30px 0 30px 0;
+}
+
+.fa-map-marker-alt{
+background-color: #F2F2F2;
+padding: 1rem 1.25rem;
+border-radius: 1rem 0 0 1rem; /*  permet de définir des coins arrondis pour la bordure d'un élément */
+text-align: center;
+}
+
+.login
+{
+color: #0065FC !important;
+}
+
+.fas fa-search
+{
+display: none;
+}
+                                                /* Filtres */
+
+.filters
+{
+display: flex;
+flex-wrap: wrap;
+grid-gap: 2vw; /* permet de définir les espaces entre les lignes et entre les colonnes d'une grille + 2% de la largeur de la fenêtre */
 align-items: center;
-justify-content: space-between;
+justify-content: flex-start;
+margin-bottom: 50px;
 }
 
-.navigation
+.iconefiltres
 {
- display: flex;
- padding: 1em;
-}
-
-.herberetactivnav
-{
-  display: flex;
-  list-style: none;
-  padding-right: 2em;
-}
-
-.activnav
-{display: flex;
-padding-left: 2em;
-}
-
-.titrehaut
-{
-  display: flex; 
-  background-color: #b589f4;
-}
-                    /* Rechercher */
-
-.rechercher
-{
-background-color: #6970f4;
-}
-
-                    /* Filtres */
-
-.filtres
-{
-  display: flex;
-  flex-wrap: wrap;
-  grid-gap: 2vw;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 30px;
-  background-color: #6ad1f7;
-}
-
-.H3filtres
-{
-  display: flex;
-  align-items: center;
-  width: 100%;
+background-color: #DEEBFF;
+color: blue;
+border-radius: 100%;
+height: 3.25rem;
+width: 3.25rem;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .icone
 {
-  border-radius: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 50px;
-  border: 2px solid #d9d9d9;
+border-radius: 60px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+height: 50px;
+border: 2px solid #d9d9d9;
 }
 
-
-                    /* HEBERGEMENT ET POPULAIRES */
-
-.hebergementetpopulaires
+.filtrestitle
 {
-  background-color: #f79696;
-  display: flex;
-  margin: 25px 0 50px;
+margin: 0 1rem 0 1rem;
+font-weight: bold;
 }
 
-                    /* Hebergement */
+                                                /* Hébergement */
 
-.hebergementetpopulaires
+
+.hebergements img 
 {
-grid-template-rows: repeat(2, 1fr);
-gap: 2rem;
+width: 30px;
+height: 30px;
 }
 
-section hebergements
+.contenulog >.contenuimagelog
 {
-    display: block;
+padding: 6px 6px 0 6px;
 }
 
-
-#Hebergements
+.logements
 {
+display: grid;
+padding: 2rem;
 background-color: #f2f2f2;
-border-radius: 15px;
-width: 62%;
+border-radius: 1.5rem;
+}
+
+.imagelog
+{
+object-position: center;
+border-top-left-radius: 1.5rem;
+border-top-right-radius: 1.5rem;   
 }
 
 .locationsmarseille
 {
 display: grid;
-grid-template-rows: repeat(3, min-content);
+grid-template-columns: 20% 20% 20%;
+grid-template-rows: 20% 20% 20%;
+}
+
+.box h3
+{
+margin: 2px 10px 5px 10px;
+}
+
+.box p{
+margin: 0px 10px 5px 10px;
+font-size: 18px;
+}
+.contenulog
+{
+width: 100%;
+box-shadow: 0 0 16px #0000002e; /* ajoute des ombres à la boîte d'un élément */
+border-radius: 1.5rem;
+background-color: white;
+}
+
+.starblue
+{
+margin: 0px 10px 5px 10px;
+display: flex;
+color: #0065FC;
+padding: 4px;
+}
+
+.starblue >i
+{
+padding-right: 4px;
+}
+
+.grey
+{
+color: #a09d9d;
+}
+
+
+
+
+                                                /* Les plus populaires */
+
+
+.aside img
+{
+width: 150px;
+height: 150px;
+}
+
+
+.aside
+{
+display: grid;
+grid-template-columns: 20% 20% 20%;
 padding: 2rem;
+row-gap: 2rem;
 background-color: #f2f2f2;
 border-radius: 1.5rem;
-
-  background-color: #f2f2f2;
 }
 
-.hotel
+.aside
 {
-width: 200px;
-background: white;
-border-radius: 20px;
-padding: 5px;
-box-sizing: border-box;
-margin: 0 5px 20px 5px;
-box-shadow: 0 5px 16px #0000002e;
-display: block;
-}
-  
-.hotel p 
-{
-margin: 5px 10px;
-font-weight: 100;
-}
-
-.hotel img 
-{
-background-color: white;
-border-radius: 15px 15px 0px 0px;
-transition-duration: 0.1s;
-width: 100%;
-height: 120px;
-object-fit: cover;
-}
-
-titre h2
-{
-display: block;
-font-size: 1.5em;
-margin-block-start: 0.83em;
-margin-block-end: 0.83em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-font-weight: bold;
-}
-
-hotel h4
-{
-display: block;
-font-size: 1.17em;
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-font-weight: bold;
-}
-
-.afficherplus
-{
-margin: 0;
-padding: 2rem 0 0 0;
-}
-
-.grey 
-{
-color: lightgrey;
-}
-
-
-
-
-                    /* Populaires */
-
-
-.populairesimages
-{
-background-color: white;
-transition-duration: 0.1s;
-cursor: pointer;
-float: left;
-width: 45%;
-height: 92%;
-border-radius: 15px 0 0 15px;
-margin: 2px 10px 2px 0px;
-object-fit: cover;
-}
-
-#lespluspopulaires
- {
-background-color: #f2f2f2;
-border-radius: 15px;
-width: 32%;
-padding: 20px;
 display: flex;
-}
-
-.fa-chart-line: before 
-{
-    right: 43px;
-    margin-top: -17px;
-    color: black;
-}
-
-#lespluspopulaires h2
-{
-margin: 0;
-display: flex;
+flex-direction: column;
 justify-content: space-between;
+margin: 4px;
 }
 
-.popular
+.imagepop
 {
-display: flex;
-border-radius: 1rem;
-background-color: white;
-padding: 6px;
-box-shadow: 0 0 16px #0000002e;
+border-radius: 1rem 0 0 1rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    /* ACTIVITE */
-
-
-
-#Activites
+.titrepop
 {
-  background-color: #f28a29; 
+margin-top: 5px;
+margin-bottom: 5px;
+display: grid;
 }
 
-.contenuActivites img
-{
-object-fit: cover;
-border-radius: 1.25rem 1.25rem 0 0;
-overflow: hidden;
-}
-
-.imageactivite
-{    
-object-fit: cover;
-width: 100%;
-height: 100%;
-overflow: hidden;
-}
-
-
-.imageactiv1
-{
-height: 440px;
-}
-.imageactiv2
-{
-height: 200px;
-}
-.imageactiv3
-{
-height: 110px;
-}
-.imageactiv4
-{
-height: 440px;
-}
-.imageactiv5
-{
-height: 140px;
-}
-.imageactiv6
-{
-height: 140px;
-}
+                                                /* Activité */
 
 
 
-
-.contenuActivites
+.containeractiv
 {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
 column-gap: 2rem;
 }
-
-.Activite1
+  
+.conteimagactiv
 {
-grid-area: 1 / 1 / 7 / 2;
-display: flex;
-flex-direction: column;
-box-shadow: 0 0 20px darkgrey;
-border-radius: 1rem;
+position: relative;
+flex: 1;
 overflow: hidden;
 }
 
-.Activite2
- {
-grid-area: 1 / 2 / 4 / 3;
-display: flex;
-flex-direction: column;
-box-shadow: 0 0 20px darkgrey;
-border-radius: 1rem;
+.actimg{
+position: absolute;
+object-fit: cover;
+width: 50%;
+height: 50%;
 overflow: hidden;
 }
 
-.Activite3
+.titreactiv
 {
-grid-area: 5 / 2 / 7 / 3;
+margin: 1.2rem 1.5rem;
+}
+
+                                                /* Footer */
+  
+.footerglobal{
+margin-top: 50px;
+padding: 2rem;
+font-family: "Raleway", "Sans serif";
+background-color: #f2f2f2;
+}
+
+.contenufooter{
+display: flex;
+justify-content: space-between;
+margin: auto;
+max-width: 100%;
+width: 1440px;
+}
+
+.TitreFooter1, .TitreFooter2, .TitreFooter3
+{
 display: flex;
 flex-direction: column;
-box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
-overflow: hidden;
-}
-
-.Activite4
-{
-grid-area: 1 / 3 / 7 / 4;
-display: flex;
-flex-direction: column;
-box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
-overflow: hidden;
-}
-
-.Activite5
-{
-grid-area: 1 / 4 / 3 / 5;
-display: flex;
-flex-direction: column;
-box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
-overflow: hidden;
-}
-
-.Activite6
-{
-grid-area: 5/ 4 / 7 / 5;
-display: flex;
-flex-direction: column;
-box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
-overflow: hidden;
-}
-
-
-
-
-
-
-
-
-footer
-{
-  background-color : #F2F2F2;;
-  border-radius: 0;
-}
-
-.footerglobal
-{
-  display: flex;
-  max-width: 100%;
-  padding: 0 10px;
-  box-sizing: border-box; /* définit la façon dont la hauteur et la largeur totale d'un élément est calculée */
-}
-
-.contenufooter
-{
-  width: 40%;
+width: 33%;
+row-gap: 0.75rem;
 }
 
 .liFooter
 {
-  color: black;
-  display: block;
-  margin: 15px 0;
-  font-weight: 500;
-  text-decoration:none;  
+margin: 0;
+}
 
-
-/* Quieries */
+a.liFooter:link, a.liFooter:active{
+text-decoration: none;
+color: black;
+}
 
