@@ -81,6 +81,44 @@ color:  #0065FC;
 
                                                 /* Barre de recherche */
 
+.boutonrecherche
+{
+background-color: #0065FC;
+color: white;
+font-weight: bold;
+border: none;
+border-radius: 0 1rem 1rem 0;
+padding: 0 1.5rem;
+font-family: "Raleway", "Sans serif";
+font-size: 1rem;
+cursor: pointer;
+}
+
+.fa-search
+{
+display: none;
+}
+
+.ville
+{
+width: 14vw;
+border: none;
+padding: 0 1.15rem;
+}
+
+.ville>value
+{
+font-size: 16px;
+font-weight: 700;
+color: #00000069;
+}
+
+i.fas
+{
+display: flex;
+align-items: center;
+}
+
 
 .barrederecherche
 {
@@ -257,7 +295,22 @@ grid-template-rows: repeat(3, 1fr);
 row-gap: 2rem;
 }
 
+.asidepop{
+display: flex;
+border-radius: 1rem;
+background-color: white;
+padding: 6px;
+box-shadow: 0 0 16px #0000002e;
+}
 
+.populaires
+{
+position: relative;
+width: 33%;
+min-width: 33%;
+max-width: 33%;
+height: 100%;
+}
 
 .populaires
 {
@@ -269,12 +322,28 @@ height: 100%;
 }
 
 
+
 .containerpop
 {
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 margin: 4px;
+}
+
+.containerpop>div>h4{
+margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.containerpop>div>p{
+margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.containerpop>div.starsrate{
+margin: 0px 10px 0px 10px;
+display: flex;
+color: #0065FC;
+padding: 0px 4px 0 4px;
 }
 
 .imagepop
