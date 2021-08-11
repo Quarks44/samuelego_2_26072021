@@ -1,4 +1,5 @@
-                                                /* Police Raleway */
+
+                                        /* Police Raleway */
 
 @import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&amp;display=swap);
 
@@ -21,31 +22,17 @@ box-sizing: border-box; /* La propriété CSS box-sizing définit la façon dont
 .conteneurglobal
 {
 max-width: 1440px;
-margin: auto;
+margin: 0 auto; /* Cela garantit que les marges gauche et droite seront définies à la même taille. Le premier paramètre 0 indique que les marges supérieure et inférieure seront toutes deux définies sur 0 */
 padding: 0 2rem;
-background-color: #ff7777;
 }
 
 .milieudepage
 {
-grid-column: 2;
-background-color: grey; /* définir la taille et l'emplacement d'un élément */
+grid-column: 2; /* propriété raccourcie permets de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille. */
 }
 
-                                                /* Header */
-
-
-header
-{
-margin-bottom: 20px;
-background-color: #ff77cf;
-}
-
-.conteneurlogo
-{
-display: flex;
-align-items: center;
-}
+                                      
+                                        /* Header */
 
 .menunav
 {
@@ -53,7 +40,7 @@ display: grid;
 grid-template-columns: 60% auto auto auto; /* La propriété grid-template-columns définit les noms des lignes et les fonctions de taille (track sizing) pour les colonnes de la grille */
 }
 
-.menunav >a
+.menunav>a
 {
 display: flex;
 justify-content: center;
@@ -63,12 +50,13 @@ header a
 {
 flex-wrap: wrap;
 padding: 2.4vw 1.8vw 2.4vw 1.8vw;
+font-weight: 500;
 border-top: 2px solid white;
 }
 
 a:link, a:visited /* modifier l'aspect d'un lien après que l'utilisateur l'a visité */
 {
-text-decoration: none;
+text-decoration: none; /* La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte */
 color: black;
 }
 
@@ -79,7 +67,31 @@ border-top: 2px solid #0065FC;
 color:  #0065FC;
 }
 
-                                                /* Barre de recherche */
+.logoreservia
+{
+padding-top: 2em;
+}
+
+                                        /* barre de recherche */
+
+.barrederecherche
+{
+display: flex;
+margin: 30px 0 30px 0;
+}
+
+.fa-map-marker-alt
+{
+background-color: #F2F2F2;
+padding: 1rem 1.25rem;
+border-radius: 1rem 0 0 1rem; /*  permet de définir des coins arrondis pour la bordure d'un élément */
+text-align: center;
+}
+
+.login
+{
+color: #0065FC !important;
+}
 
 .boutonrecherche
 {
@@ -106,43 +118,19 @@ border: none;
 padding: 0 1.15rem;
 }
 
-.ville>value
+.ville::placeholder /* permet aux développeurs web de personnaliser l'apparence de ce texte */
 {
 font-size: 16px;
 font-weight: 700;
 color: #00000069;
 }
 
-i.fas
-{
-display: flex;
-align-items: center;
-}
-
-
-.barrederecherche
-{
-display: flex;
-margin: 30px 0 30px 0;
-}
-
-.fa-map-marker-alt{
-background-color: #F2F2F2;
-padding: 1rem 1.25rem;
-border-radius: 1rem 0 0 1rem; /*  permet de définir des coins arrondis pour la bordure d'un élément */
-text-align: center;
-}
-
-.login
-{
-color: #0065FC !important;
-}
-
-.fas fa-search
+.boutonrecherche > i
 {
 display: none;
 }
-                                                /* Filtres */
+
+                                        /* filtres */
 
 .filtres
 {
@@ -152,7 +140,6 @@ grid-gap: 2vw; /* permet de définir les espaces entre les lignes et entre les c
 align-items: center;
 justify-content: flex-start;
 margin-bottom: 50px;
-background-color: #dd77ff;
 }
 
 .iconefiltres
@@ -167,6 +154,11 @@ align-items: center;
 justify-content: center;
 }
 
+.fas .fa
+{
+color: blue;
+}
+
 .icone
 {
 border-radius: 60px;
@@ -177,65 +169,154 @@ height: 50px;
 border: 2px solid #d9d9d9;
 }
 
+.info
+{
+display: flex;
+margin: 1rem 0 2rem 0;
+align-items: center;
+}
+
+.textinfo
+{
+min-width: 2rem;
+min-height: 2rem;
+height: 2rem;
+width: 2rem;
+border: solid 1px #d9d9d9;
+border-radius: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 1rem;
+}
+
+.fa-info
+{
+color:#0065FC
+}
+
 .filtrestitle
 {
 margin: 0 1rem 0 1rem;
 font-weight: bold;
 }
 
-                                                /* Hébergement */
+                                        /* Hébergement */
 
-
-.hebergements img 
+.fa-info-circle
 {
-width: 30px;
-height: 30px;
+color: blue;
 }
 
-.contenulog >.contenuimagelog
+.grey
+{
+color: #d9d9d9;
+}
+
+.hebergementetpopulaires
+{
+display: grid;
+grid-template-columns: 66% 33%;
+column-gap: 2rem;
+}
+
+.contenulog >.imgcontainer
 {
 padding: 6px 6px 0 6px;
+}
+
+.imagelog
+{
+object-fit: cover; /* Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu */
+object-position: center; /* est utilisée avec object-fit pour spécifier comment un <img> doit être positionné avec des coordonnées x/y à l'intérieur de sa "propre zone de contenu" */
+height: 7vw;
+width: 100%;
+max-width: 100%;
+max-height: 100%;
+border-top-left-radius: 1.5rem;
+border-top-right-radius: 1.5rem;  
 }
 
 .logements
 {
 display: grid;
+grid-template-rows: repeat(3, min-content);
 padding: 2rem;
 background-color: #f2f2f2;
 border-radius: 1.5rem;
-background-color: #9977ff;
-}
-
-.imagelog
-{
-object-position: center;
-border-top-left-radius: 1.5rem;
-border-top-right-radius: 1.5rem;   
 }
 
 .locationsmarseille
 {
 display: grid;
-grid-template-columns: 20% 20% 20%;
-grid-template-rows: 20% 20% 20%;
+grid-template-columns: repeat(3 ,1fr);
+grid-template-rows: repeat(2, 1fr);
+gap: 2rem;
 }
 
-.box h3
+                                        /* Populaires */
+
+
+.aside
 {
-margin: 2px 10px 5px 10px;
+margin: 0; 
+display: flex; 
+justify-content: space-between;
 }
 
-.box p{
-margin: 0px 10px 5px 10px;
-font-size: 18px;
+.aside
+{
+display: grid;
+grid-template-rows: auto repeat(3, 1fr); /*  utilise tout l'espace possible pour cette ligne, équivaut à minmax */ /*  permet de réutiliser un même motif sur la grille */
+padding: 2rem;
+row-gap: 2rem;
+background-color: #f2f2f2;
+border-radius: 1.5rem;
 }
 
-.contenulog
+.asidepop
 {
 width: 100%;
 box-shadow: 0 0 16px #0000002e; /* ajoute des ombres à la boîte d'un élément */
 border-radius: 1.5rem;
 background-color: white;
+}
+
+.containerpop
+{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin: 4px;
+}
+
+.containerpop>div>h3
+{
+margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.containerpop>div>p
+{
+margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.containerpop>div.starsrate
+{
+margin: 0px 10px 0px 10px;
+display: flex;
+color: #0065FC;
+padding: 0px 4px 0 4px;
+}
+
+.contenulog h3
+{
+margin: 2px 10px 5px 10px;
+}
+
+.contenulog p
+{
+margin: 0px 10px 5px 10px;
+font-size: 18px;
 }
 
 .starblue
@@ -251,41 +332,13 @@ padding: 4px;
 padding-right: 4px;
 }
 
-.grey
-{
-color: #a09d9d;
-}
-
-
-
-
-                                                /* Les plus populaires */
-
-
-.aside img
-{
-width: 150px;
-height: 150px;
-}
-
-
-.aside
-{
-display: grid;
-grid-template-columns: 20% 20% 20%;
-padding: 2rem;
-row-gap: 2rem;
-background-color: #f2f2f2;
-border-radius: 1.5rem;
-background-color: #77b9ff;
-}
-
-.aside
+.asidepop
 {
 display: flex;
-flex-direction: column;
-justify-content: space-between;
-margin: 4px;
+border-radius: 1rem;
+background-color: white;
+padding: 6px;
+box-shadow: 0 0 16px #0000002e; 
 }
 
 .asidegridcontainer
@@ -295,14 +348,6 @@ grid-template-rows: repeat(3, 1fr);
 row-gap: 2rem;
 }
 
-.asidepop{
-display: flex;
-border-radius: 1rem;
-background-color: white;
-padding: 6px;
-box-shadow: 0 0 16px #0000002e;
-}
-
 .populaires
 {
 position: relative;
@@ -310,44 +355,14 @@ width: 33%;
 min-width: 33%;
 max-width: 33%;
 height: 100%;
-}
-
-.populaires
-{
-position: relative;
-width: 33%;
-min-width: 33%;
-max-width: 33%;
-height: 100%;
-}
-
-
-
-.containerpop
-{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-margin: 4px;
-}
-
-.containerpop>div>h4{
-margin: 0.25rem 0.75rem 0.25rem 0.75rem;
-}
-
-.containerpop>div>p{
-margin: 0.25rem 0.75rem 0.25rem 0.75rem;
-}
-
-.containerpop>div.starsrate{
-margin: 0px 10px 0px 10px;
-display: flex;
-color: #0065FC;
-padding: 0px 4px 0 4px;
 }
 
 .imagepop
 {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
 border-radius: 1rem 0 0 1rem;
 }
 
@@ -358,18 +373,12 @@ margin-bottom: 5px;
 display: grid;
 }
 
-
-
-                                                /* Activité */
-
-
-
-
-#Activites
+.fa-chart-line
 {
-background-color: #77ffd6;
+padding-left: 2em;
 }
 
+                                        /* Activités */
 
 .containeractiv
 {
@@ -378,9 +387,10 @@ grid-template-columns: repeat(4, 1fr);
 grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
 column-gap: 2rem;
 }
-
-.Activite1 { 
-grid-area: 1 / 1 / 7 / 2; 
+  
+.Activite1
+{ 
+grid-area: 1 / 1 / 7 / 2; /* propriété spécifie la taille et l'emplacement d'un élément de grille dans une disposition de grille */ /* superpropriete rows start/end column start/end */
 display: flex;
 flex-direction: column;
 box-shadow: 0 0 20px #0000002e;
@@ -393,12 +403,13 @@ overflow: hidden;
 grid-area: 1 / 2 / 4 / 3; 
 display: flex;
 flex-direction: column;
-box-shadow: 0 0 20px #0000002e;
+box-shadow: 0 0 20px #0000002e; /* ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules */
 border-radius: 1rem;
 overflow: hidden;
 }
   
-.Activite3{ 
+.Activite3
+{ 
 grid-area: 5 / 2 / 7 / 3; 
 display: flex;
 flex-direction: column;
@@ -407,7 +418,8 @@ border-radius: 1rem;
 overflow: hidden;
 }
   
-.Activite4 { 
+.Activite4
+{ 
 grid-area: 1 / 3 / 7 / 4; 
 display: flex;
 flex-direction: column;
@@ -416,7 +428,8 @@ border-radius: 1rem;
 overflow: hidden; 
 }
   
-.Activite5 { 
+.Activite5
+{ 
 grid-area: 1 / 4 / 3 / 5; 
 display: flex;
 flex-direction: column;
@@ -425,7 +438,8 @@ border-radius: 1rem;
 overflow: hidden;
 }
 
-.Activite6 {
+.Activite6
+{
 grid-area: 5/ 4 / 7 / 5;
 display: flex;
 flex-direction: column;
@@ -433,7 +447,7 @@ box-shadow: 0 0 20px #0000002e;
 border-radius: 1rem;
 overflow: hidden;
 }
- 
+
 .conteimagactiv
 {
 position: relative;
@@ -441,11 +455,12 @@ flex: 1;
 overflow: hidden;
 }
 
-.actimg{
+.imactiv
+{
 position: absolute;
 object-fit: cover;
-width: 50%;
-height: 50%;
+width: 100%;
+height: 100%;
 overflow: hidden;
 }
 
@@ -453,17 +468,18 @@ overflow: hidden;
 {
 margin: 1.2rem 1.5rem;
 }
+                                        /* Footer */
 
-                                                /* Footer */
-  
-.footerglobal{
+.footerglobal
+{
 margin-top: 50px;
 padding: 2rem;
 font-family: "Raleway", "Sans serif";
 background-color: #f2f2f2;
 }
 
-.contenufooter{
+.contenufooter
+{
 display: flex;
 justify-content: space-between;
 margin: auto;
@@ -488,3 +504,17 @@ a.liFooter:link, a.liFooter:active{
 text-decoration: none;
 color: black;
 }
+
+.contenulog:hover, .asidepop:hover, .Activite1:hover, .Activite2:hover, .Activite3:hover, .Activite4:hover, .Activite5:hover, .Activite6:hover .f:hover .conteimagactiv:hover
+{
+transform: scale(1.04); /* [La souris se déplace dans l'image pour zoomer en double effet */ /* méthode augmente ou diminue la taille d'un élément */
+}
+
+.contenulog, .asidepop, .Activite1, .Activite2, .Activite3, .Activite4, .Activite5, .Activite6., .f
+{
+transition-duration: 1s; /* définit le nombre de secondes ou de millisecondes que doit durer une animation */
+}
+
+
+
+                                        /* Media Quieries */
