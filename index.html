@@ -8,7 +8,56 @@
     <link rel="stylesheet" href="style.css"> <!-- définir un lien vers une feuille de style pour la mise en page -->
     <script src="https://kit.fontawesome.com/9a11bde2d2.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><!-- site icone et font -->    
+
+    <title>Media Query</title>
+    <style>
+
+    /* Media Query pour ecran large */
+    @media (min-width: 1280px)  /* appliquer des styles à condition que la largeur de la zone d'affichage (viewport) soit inférieure à 1280px */
+    {
+        body 
+        {
+        background-color: white;
+        }
+    }
+
+    /* Media Query pour ordinateur portable */
+    @media (min-width: 1025px) and (max-width: 1280px)
+{
+        body 
+        {
+        background-color: #fca1f1;
+        }
+}  
+
+    /* Media Query pour tablette mode portrait */
+    @media (min-width: 768px) and (max-width: 1024px)
+{
+        body 
+        {
+        background-color: #dca1fc;
+        }
+}   
+
+    /* Media Query tablette basse resolution */
+        @media (min-width: 481px) and (max-width: 767px) {
+            body {
+                background-color: #a1b5fc;
+            }
+        }
+
+    /* Media Query pour téléphone mobile */
+    @media (max-width: 480px) 
+{
+        body 
+        {
+        background-color: #a1fcd5;
+        }
+}   
+    </style>  
+    
 </head>
+
 
 <body>
     <div class="conteneurglobal">
@@ -338,7 +387,7 @@
                             <a class="liFooter" href="#">Nous contacter</a>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- fin footer -->
 </body>
 </html>
                     

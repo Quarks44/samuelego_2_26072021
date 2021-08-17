@@ -533,13 +533,13 @@ transition-duration: 1s; /* définit le nombre de secondes ou de millisecondes q
 
                                         /* Media Quieries */                /*permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil */
 
-@media (max-width: 1024px) /* appliquer des styles à condition que la largeur de la zone d'affichage (viewport) soit inférieure à 1400px */
+@media (max-width: 1024px) /* appliquer des styles à condition que la largeur de la zone d'affichage (viewport) soit inférieure à 1024px */
 {
 
     .hebergementetpopulaires
     {
     grid-template-columns: auto;
-    row-gap: 2em;
+    row-gap: 1em;
     }
 
     .aside
@@ -555,47 +555,26 @@ transition-duration: 1s; /* définit le nombre de secondes ou de millisecondes q
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
-#Activites
-{
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    .containeractiv 
+    {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 15em);
+    row-gap: 1em;
+    }
+
+    .containeractiv>*
+    {
+    grid-area: auto;
+    }
+
+    .contenufooter
+    {
+    flex-direction: column;
+    }
+
+
+
+
+    
 }
 
-
-
-}
-
-
-
-/* Media Query pour ecran large */
-@media (min-width: 1280px) /* appliquer des styles à condition que la largeur de la zone d'affichage (viewport) soit inférieure à 1280px */
-{
-body {
-background-color: grey;
-}
-
-
-
-
-/* Media Query pour ordinateur portable */
-@media (min-width: 1025px) and (max-width: 1280px){
-body {
-background-color: green;
-
-
-
-            }
-            
-/* Media Query pour tablette mode portrait */
-@media (min-width: 768px) and (max-width: 1024px){
-body {
-background-color: blue;
-}     
-
-
-
-
-/* Media Query pour téléphone mobile */
-@media (max-width: 480px) {
-body {
-background-color: red;
-}
