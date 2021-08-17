@@ -22,8 +22,8 @@ box-sizing: border-box; /* La propriété CSS box-sizing définit la façon dont
 .conteneurglobal
 {
 max-width: 1440px;
-margin: 0 auto; /* Cela garantit que les marges gauche et droite seront définies à la même taille. Le premier paramètre 0 indique que les marges supérieure et inférieure seront toutes deux définies sur 0 */
-padding: 0 2rem;
+margin: 0 auto; /* Cela garantit que les marges gauche et droite seront définies à la même taille. Le pemier paramètre 0 indique que les marges supérieure et inférieure seront toutes deux définies sur 0 */
+padding: 0 2em;
 }
 
 .milieudepage
@@ -56,7 +56,7 @@ border-top: 2px solid white;
 
 a:link, a:visited /* modifier l'aspect d'un lien après que l'utilisateur l'a visité */
 {
-text-decoration: none; /* La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte */
+text-decoration: none;
 color: black;
 }
 
@@ -83,8 +83,8 @@ margin: 30px 0 30px 0;
 .fa-map-marker-alt
 {
 background-color: #F2F2F2;
-padding: 1rem 1.25rem;
-border-radius: 1rem 0 0 1rem; /*  permet de définir des coins arrondis pour la bordure d'un élément */
+padding: 1em 1.25em;
+border-radius: 1em 0 0 1em; /*  permet de définir des coins arrondis pour la bordure d'un élément */
 text-align: center;
 }
 
@@ -99,10 +99,10 @@ background-color: #0065FC;
 color: white;
 font-weight: bold;
 border: none;
-border-radius: 0 1rem 1rem 0;
-padding: 0 1.5rem;
+border-radius: 0 1em 1em 0;
+padding: 0 1.5em;
 font-family: "Raleway", "Sans serif";
-font-size: 1rem;
+font-size: 1em;
 cursor: pointer;
 }
 
@@ -111,11 +111,20 @@ cursor: pointer;
 display: none;
 }
 
+button{
+content: url("https://fontawesome.com/v5.15/icons/search?style=solid");
+}
+
+.fa-search:after
+{
+content: url("https://fontawesome.com/v5.15/icons/search?style=solid");
+}
+
 .ville
 {
 width: 14vw;
 border: none;
-padding: 0 1.15rem;
+padding: 0 1.15em;
 }
 
 .ville::placeholder /* permet aux développeurs web de personnaliser l'apparence de ce texte */
@@ -147,8 +156,8 @@ margin-bottom: 50px;
 background-color: #DEEBFF;
 color: blue;
 border-radius: 100%;
-height: 3.25rem;
-width: 3.25rem;
+height: 3.25em;
+width: 3.25em;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -172,22 +181,22 @@ border: 2px solid #d9d9d9;
 .info
 {
 display: flex;
-margin: 1rem 0 2rem 0;
+margin: 1em 0 2em 0;
 align-items: center;
 }
 
 .textinfo
 {
-min-width: 2rem;
-min-height: 2rem;
-height: 2rem;
-width: 2rem;
+min-width: 2em;
+min-height: 2em;
+height: 2em;
+width: 2em;
 border: solid 1px #d9d9d9;
 border-radius: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-right: 1rem;
+margin-right: 1em;
 }
 
 .fa-info
@@ -197,7 +206,7 @@ color:#0065FC
 
 .filtrestitle
 {
-margin: 0 1rem 0 1rem;
+margin: 0 1em 0 1em;
 font-weight: bold;
 }
 
@@ -217,7 +226,7 @@ color: #d9d9d9;
 {
 display: grid;
 grid-template-columns: 66% 33%;
-column-gap: 2rem;
+column-gap: 2em;
 }
 
 .contenulog >.imgcontainer
@@ -227,31 +236,31 @@ padding: 6px 6px 0 6px;
 
 .imagelog
 {
-object-fit: cover; /* Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu */
+object-fit: cover; /* Le contenu emplacé est dimensionné pour maintenir son ratio d'affichage tout en emplissant toute la boîte de contenu */
 object-position: center; /* est utilisée avec object-fit pour spécifier comment un <img> doit être positionné avec des coordonnées x/y à l'intérieur de sa "propre zone de contenu" */
 height: 7vw;
 width: 100%;
 max-width: 100%;
 max-height: 100%;
-border-top-left-radius: 1.5rem;
-border-top-right-radius: 1.5rem;  
+border-top-left-radius: 1.5em;
+border-top-right-radius: 1.5em; 
+box-shadow: 0 0 16px #0000002e;  
 }
 
 .logements
 {
 display: grid;
-grid-template-rows: repeat(3, min-content);
-padding: 2rem;
+grid-template-rows: repeat(3, min-content); /*  utilise tout l'espace possible pour cette ligne, équivaut à minmax */ /*  permet de réutiliser un même motif sur la grille */
+padding: 2em;
 background-color: #f2f2f2;
-border-radius: 1.5rem;
+border-radius: 1.5em;
 }
 
 .locationsmarseille
 {
 display: grid;
 grid-template-columns: repeat(3 ,1fr);
-grid-template-rows: repeat(2, 1fr);
-gap: 2rem;
+gap: 2em;
 }
 
                                         /* Populaires */
@@ -261,25 +270,28 @@ gap: 2rem;
 {
 margin: 0; 
 display: flex; 
+justify-content: space-around;
+display: grid;
+padding: 1em;
+background-color: #f2f2f2;
+border-radius: 1.5em;
+}
+
+.aside>h2
+{
+margin: 1em;
+display: flex;
 justify-content: space-between;
 }
 
-.aside
-{
-display: grid;
-grid-template-rows: auto repeat(3, 1fr); /*  utilise tout l'espace possible pour cette ligne, équivaut à minmax */ /*  permet de réutiliser un même motif sur la grille */
-padding: 2rem;
-row-gap: 2rem;
-background-color: #f2f2f2;
-border-radius: 1.5rem;
-}
 
 .asidepop
 {
 width: 100%;
 box-shadow: 0 0 16px #0000002e; /* ajoute des ombres à la boîte d'un élément */
-border-radius: 1.5rem;
+border-radius: 1.5em;
 background-color: white;
+
 }
 
 .containerpop
@@ -290,14 +302,14 @@ justify-content: space-between;
 margin: 4px;
 }
 
-.containerpop>div>h3
+.containerpop>div>h4
 {
-margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+margin: 0.25em 0.75em 0.25em 0.75em;
 }
 
 .containerpop>div>p
 {
-margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+margin: 0.25em 0.75em 0.25em 0.75em;
 }
 
 .containerpop>div.starsrate
@@ -308,7 +320,7 @@ color: #0065FC;
 padding: 0px 4px 0 4px;
 }
 
-.contenulog h3
+.contenulog h4
 {
 margin: 2px 10px 5px 10px;
 }
@@ -335,7 +347,7 @@ padding-right: 4px;
 .asidepop
 {
 display: flex;
-border-radius: 1rem;
+border-radius: 1em;
 background-color: white;
 padding: 6px;
 box-shadow: 0 0 16px #0000002e; 
@@ -344,8 +356,7 @@ box-shadow: 0 0 16px #0000002e;
 .asidegridcontainer
 {
 display: grid;
-grid-template-rows: repeat(3, 1fr);
-row-gap: 2rem;
+row-gap: 1em;
 }
 
 .populaires
@@ -363,7 +374,7 @@ position: absolute;
 width: 100%;
 height: 100%;
 object-fit: cover;
-border-radius: 1rem 0 0 1rem;
+border-radius: 1em 0 0 1em;
 }
 
 .titrepop
@@ -384,8 +395,8 @@ padding-left: 2em;
 {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
-grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
-column-gap: 2rem;
+grid-template-rows: auto 14em 2em 2em 2em 14em;
+column-gap: 2em;
 }
   
 .Activite1
@@ -394,7 +405,7 @@ grid-area: 1 / 1 / 7 / 2; /* propriété spécifie la taille et l'emplacement d'
 display: flex;
 flex-direction: column;
 box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
+border-radius: 1em;
 overflow: hidden;
 }
   
@@ -404,7 +415,7 @@ grid-area: 1 / 2 / 4 / 3;
 display: flex;
 flex-direction: column;
 box-shadow: 0 0 20px #0000002e; /* ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules */
-border-radius: 1rem;
+border-radius: 1em;
 overflow: hidden;
 }
   
@@ -414,7 +425,7 @@ grid-area: 5 / 2 / 7 / 3;
 display: flex;
 flex-direction: column;
 box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
+border-radius: 1em;
 overflow: hidden;
 }
   
@@ -424,7 +435,7 @@ grid-area: 1 / 3 / 7 / 4;
 display: flex;
 flex-direction: column;
 box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
+border-radius: 1em;
 overflow: hidden; 
 }
   
@@ -434,7 +445,7 @@ grid-area: 1 / 4 / 3 / 5;
 display: flex;
 flex-direction: column;
 box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
+border-radius: 1em;
 overflow: hidden;
 }
 
@@ -444,7 +455,7 @@ grid-area: 5/ 4 / 7 / 5;
 display: flex;
 flex-direction: column;
 box-shadow: 0 0 20px #0000002e;
-border-radius: 1rem;
+border-radius: 1em;
 overflow: hidden;
 }
 
@@ -466,14 +477,14 @@ overflow: hidden;
 
 .titreactiv
 {
-margin: 1.2rem 1.5rem;
+margin: 1.2em 1.5em;
 }
                                         /* Footer */
 
 .footerglobal
 {
 margin-top: 50px;
-padding: 2rem;
+padding: 2em;
 font-family: "Raleway", "Sans serif";
 background-color: #f2f2f2;
 }
@@ -492,7 +503,7 @@ width: 1440px;
 display: flex;
 flex-direction: column;
 width: 33%;
-row-gap: 0.75rem;
+row-gap: 0.75em;
 }
 
 .liFooter
@@ -505,7 +516,7 @@ text-decoration: none;
 color: black;
 }
 
-.contenulog:hover, .asidepop:hover, .Activite1:hover, .Activite2:hover, .Activite3:hover, .Activite4:hover, .Activite5:hover, .Activite6:hover .f:hover .conteimagactiv:hover
+.contenulog:hover, .asidepop:hover, .Activite1:hover, .Activite2:hover, .Activite3:hover, .Activite4:hover, .Activite5:hover, .Activite6:hover, .f:hover, .conteimagactiv:hover
 {
 transform: scale(1.04); /* [La souris se déplace dans l'image pour zoomer en double effet */ /* méthode augmente ou diminue la taille d'un élément */
 }
@@ -517,4 +528,74 @@ transition-duration: 1s; /* définit le nombre de secondes ou de millisecondes q
 
 
 
-                                        /* Media Quieries */
+
+
+
+                                        /* Media Quieries */                /*permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil */
+
+@media (max-width: 1024px) /* appliquer des styles à condition que la largeur de la zone d'affichage (viewport) soit inférieure à 1400px */
+{
+
+    .hebergementetpopulaires
+    {
+    grid-template-columns: auto;
+    row-gap: 2em;
+    }
+
+    .aside
+    {
+    grid-area: 1;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    }
+
+    .locationsmarseille
+    {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+#Activites
+{
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+}
+
+
+
+/* Media Query pour ecran large */
+@media (min-width: 1280px) /* appliquer des styles à condition que la largeur de la zone d'affichage (viewport) soit inférieure à 1280px */
+{
+body {
+background-color: grey;
+}
+
+
+
+
+/* Media Query pour ordinateur portable */
+@media (min-width: 1025px) and (max-width: 1280px){
+body {
+background-color: green;
+
+
+
+            }
+            
+/* Media Query pour tablette mode portrait */
+@media (min-width: 768px) and (max-width: 1024px){
+body {
+background-color: blue;
+}     
+
+
+
+
+/* Media Query pour téléphone mobile */
+@media (max-width: 480px) {
+body {
+background-color: red;
+}
