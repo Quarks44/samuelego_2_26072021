@@ -16,8 +16,9 @@ margin: 0;
 
 body
 {
-   padding: 0;
-   margin: 0;
+padding: 0;
+margin: 0;
+overflow: auto;
 }
 
 header nav a:hover 
@@ -307,12 +308,9 @@ box-shadow: 0 0 16px #0000002e;
 .asidegridcontainer
 {
 display: grid;
-grid-template-columns: 100%;
-grid-template-rows: 38% 38% 38%;
 gap: 1em;
 padding: 0 40px 0 0;
 row-gap: 2em;
-justify-content: center;
 }
 
 
@@ -343,7 +341,8 @@ display: grid;
 
 .fa-chart-line
 {
-padding-left: 6em;
+float: right;
+padding-right: 30px;
 }
 
                                         /* Activités */
@@ -484,59 +483,96 @@ transition-duration: 1s; /* définit le nombre de secondes ou de millisecondes q
 }
 
 
+                                        /* Media Quieries */                     /*permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil */
 
-
-
-
-                                        /* Media Quieries */                /*permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil */
-
-@media (max-width: 1024px) /* appliquer des styles à condition que la largeur de la zone d'affichage (viewport) soit inférieure à 1024px */
+@media (max-width: 1044px) 
 {
+      .hebergementetpopulaires
+      {
+      grid-template-columns: auto;
+      row-gap: 2em;
+      }
 
-    .hebergementetpopulaires
-    {
-    grid-template-columns: auto;
-    row-gap: 1em;
-    }
+      .aside
+      {
+      grid-area: 1;
+      }
 
-    .aside
-    {
-    grid-area: 1;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    }
+      .asidegridcontainer 
+      {
+      display: grid;
+      padding: 2em;
+      row-gap: 2em;
+      }
 
-    .locationsmarseille
-    {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
+      .menuhaut
+      {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      }
 
-    .containeractiv 
-    {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(6, 15em);
-    row-gap: 1em;
-    }
+      .locationsmarseille
+      {
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: auto;
+      }
 
-    .containeractiv>*
-    {
-    grid-area: auto;
-    }
+      .logements
+      {
+      background-color: white;
+      }
+      
+      .containeractiv
+      {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 1.5rem;
+      }
 
-    .contenufooter
-    {
-    flex-direction: column;
-    }
+      .imactiv
+      {
+      position: relative;
+      max-width: 100%;
+      max-height: 130px;
+      }
 
-
-
-
-
-
-
-
-
-    
+      .Activite1, .Activite2, .Activite3, .Activite4, .Activite5, .Activite6
+      {
+      margin-bottom: 10px;
+      }
 }
 
+@media (max-width: 665px) 
+{
+      .contenufooter
+      {
+      display: flex;
+      flex-direction: column;
+      }
+
+      .asidegridcontainer 
+      {
+      display: grid;
+      gap: 1em;
+      padding: 10px;
+      row-gap: 2em;
+      }
+
+      .aside {
+      background-color: #f2f2f2;
+      border-radius: 1.5em;
+      padding: 0px;
+      }
+
+      .logements 
+      {
+      border-radius: 1.5em;
+      padding: 0;
+      }
+
+      .locationsmarseille 
+      {
+      padding: 0;
+      }
+}
