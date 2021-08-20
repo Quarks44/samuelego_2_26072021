@@ -76,66 +76,52 @@ margin: 0;
 
                                         /* barre de recherche */
 
-.barrederecherche
+.barrederecherche 
 {
-display: flex;
-padding: 20px 0 20px 0;
+display: inline-flex;
+margin: 15px 0 15px 0;
+align-items: center;
 }
 
-.fa-map-marker-alt
- {
-    padding: 16.5px 20px;
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-.login
+.iconemap 
 {
-color: #0065FC !important; /*ajoute plus d'importance à une propriété/valeur */
-}
-
-.boutonrecherche
-{
-background: transparent;
-width: 130px;
-height: 50px;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
-background-color: #0065fc;
-color: white;
-font-size: 1em;
-font-weight: 700;
+font-size: 25px;
+background-color: #f2f2f2;
+border-radius: 1rem 0 0 1rem;
+padding: 10px 10px;
+width: 30px;
 text-align: center;
 }
 
-.textesearch
+input 
 {
-padding: 16.5px 20px;
+padding: 10px;
+border-radius: 5px;
+font-weight: bold;
+font-family: "Raleway", "Sans serif";
+border-right: none;
+border-left: none;
+border-top: #f2f2f2 1px solid;
+border-bottom: #f2f2f2 1px solid;
+padding: 0 1.5em;
+width: 60%;
+height: 50px;
+font-size: 15px;
 }
 
-.fa-search
+.boutonderecherche 
 {
-visibility: hidden;
+border-radius: 0px 18px 18px 0;
+padding: 15px;
+background-color: #0065fc;
+color: white;
+position: relative;right: 43px;
+}
+
+.loupelogo i
+{
 display: none;
 }
-
-.boutonrecherche:hover 
-{
-color: #0065fc;
-background-color: #deebff;
-border: 1px solid #0065fc;
-cursor: pointer;
-}
-
-
-.ville
-{
-border: none;
-padding: 0 1.15em;
-}
-
 
 
                                         /* filtres */
@@ -487,6 +473,26 @@ transition-duration: 1s; /* définit le nombre de secondes ou de millisecondes q
 
 @media (max-width: 1044px) 
 {
+
+
+   
+      
+      
+      .loupelogo i 
+      {
+      display: inline;
+      color: white;
+      background-color: #0065fc;
+      padding: 18px;
+      border-radius: 18px;
+      position: relative;
+      right: 52px;
+      }
+
+      .boutonderecherche {
+      display: none;
+      }
+
       .hebergementetpopulaires
       {
       grid-template-columns: auto;
