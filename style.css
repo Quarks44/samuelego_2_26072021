@@ -7,11 +7,17 @@ h4
 {
 margin: 0;
 font-weight: bold;
+color: black;
 }
 
 p
 {
 margin: 0;
+color: black;
+}
+
+.navA
+{color: black;
 }
 
 body
@@ -21,16 +27,8 @@ margin: 0;
 overflow: auto;
 }
 
-header nav a:hover 
-{
-text-decoration: none; /* La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte */
-border-top: solid 1px #0065fc;
-padding-top: 40px;
-margin: 10px;
-}
 
                                         /* Police Raleway */
-
 
 *
 {
@@ -43,8 +41,6 @@ max-width: 1440px;
 margin: 0 auto; /* Cela garantit que les marges gauche et droite seront définies à la même taille. Le pemier paramètre 0 indique que les marges supérieure et inférieure seront toutes deux définies sur 0 */
 padding: 0 2em;
 }
-
-
                                       
                                         /* Header */
 
@@ -53,16 +49,24 @@ padding: 0 2em;
 display: grid;
 grid-template-columns: 73% 13% 10% 10%;
 align-items: center;
-padding: 1em 0 1em 0;
+}
+
+nav a:hover 
+{
+text-decoration: none; /* La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte */
+border-top: solid 3px #0065fc;
+padding-top: 23px;
+}
+
+strong
+{
+color: #0065fc;  
 }
 
 a:link, a:visited /* modifier l'aspect d'un lien après que l'utilisateur l'a visité */
 {
 text-decoration: none;
-color: black;
 }
-
-
 
 #titrehaut
 {
@@ -75,6 +79,7 @@ margin: 0;
 
 
                                         /* barre de recherche */
+
 
 .barrederecherche 
 {
@@ -115,7 +120,8 @@ border-radius: 0px 18px 18px 0;
 padding: 15px;
 background-color: #0065fc;
 color: white;
-position: relative;right: 43px;
+position: relative;
+right: 43px;
 }
 
 .loupelogo i
@@ -187,11 +193,6 @@ color:#0065FC
 
                                         /* Hébergement */
 
-
-.conteneurhebergement
-{
-
-}
 
 .fa-info-circle
 {
@@ -474,11 +475,7 @@ transition-duration: 1s; /* définit le nombre de secondes ou de millisecondes q
 @media (max-width: 1044px) 
 {
 
-
-   
-      
-      
-      .loupelogo i 
+    .loupelogo i 
       {
       display: inline;
       color: white;
@@ -515,6 +512,12 @@ transition-duration: 1s; /* définit le nombre de secondes ou de millisecondes q
       {
       grid-template-columns: auto auto;
       grid-template-rows: auto auto;
+      padding: 0;
+      }
+
+      .login
+      {
+      grid-area: 1/2;
       }
 
       .locationsmarseille
