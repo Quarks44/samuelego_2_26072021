@@ -1,7 +1,8 @@
                                         /* Format clearing */
 
-h1 h2 h3 h4 h5 h6 div ul ol i img 
+h1, h2, h3, h4, h5, h6, div, ul, ol, i, img
 { margin: 0; padding: 0; margin-block-start: 0;margin-block-end: 0;}
+
                                        
 h4
 {
@@ -27,6 +28,9 @@ margin: 0;
 overflow: auto;
 }
 
+nav a
+{text-decoration: none;
+padding-top: 23px;}
 
                                         /* Police Raleway */
 
@@ -53,7 +57,7 @@ align-items: center;
 
 nav a:hover 
 {
-text-decoration: none; /* La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte */
+/* La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte */
 border-top: solid 3px #0065fc;
 padding-top: 23px;
 }
