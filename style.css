@@ -522,7 +522,7 @@
 
     .menuhaut
     {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 20%;
     grid-template-rows: auto auto;
     padding: 0;
     }
